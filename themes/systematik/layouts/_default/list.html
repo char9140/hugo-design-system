@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="eng">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design system</title>
+</head>
+
+<body>
+    <h1>{{ .Title}}</h1>
+    <section>
+        {{ .Content}}
+    </section>
+
+
+    {{ range .Pages }}
+    <h3>{{ .Title}}</h3>
+    <div>
+        {{ .Content}}
+    </div>
+    {{ end }}
+
+</body>
+
+</html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
