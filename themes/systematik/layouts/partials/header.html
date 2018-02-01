@@ -11,4 +11,15 @@
 
 <body>
 
-    Fedt site! ja
+    <nav class="desktop_nav">
+        {{ $currentPage := . }} {{ range .Site.Menus.main }}
+        <a class="sidebar-nav-item{{if or ($currentPage.IsMenuCurrent " main " .) ($currentPage.HasMenuCurrent "main " .) }} active{{end}}" href="{{ .URL }}" title="{{ .Title }}">{{ .Name }}</a> {{ end }}
+    </nav>
+
+    <div id="mySidenav" class="mobile_nav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a> {{ $currentPage := . }} {{ range .Site.Menus.main }}
+        <a class="sidebar-nav-item{{if or ($currentPage.IsMenuCurrent " main " .) ($currentPage.HasMenuCurrent "main " .) }} active{{end}}" href="{{ .URL }}" title="{{ .Title }}">{{ .Name }}</a> {{ end }}
+    </div>
+
+    <!-- Use any element to open the sidenav -->
+    <span onclick="openNav()">Menu</span>
