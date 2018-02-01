@@ -1,12 +1,7 @@
 {{ partial "header.html" . }}
-<h1>{{ .Title}}</h1>
-<section>
-    {{ .Content}}
+<section class="single-container">
+    <h1>{{ .Title}}</h1>
+    <div>{{ .Content}}</div>
 </section>
-</body>
 
 {{ partial "footer.html" . }}
-
-</html>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
