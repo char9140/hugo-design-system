@@ -7,19 +7,20 @@
     <title></title>
     <link rel="stylesheet" href="{{ .Site.BaseURL}}css/normalize.css">
     <link rel="stylesheet" href="{{.Site.BaseURL}}css/style.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
 </head>
 
 <body>
-
-    <nav class="desktop_nav">
+    <div class="topnav" id="myTopnav">
         {{ $currentPage := . }} {{ range .Site.Menus.main }}
         <a class="sidebar-nav-item{{if or ($currentPage.IsMenuCurrent " main " .) ($currentPage.HasMenuCurrent "main " .) }} active{{end}}" href="{{ .URL }}" title="{{ .Title }}">{{ .Name }}</a> {{ end }}
-    </nav>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+    </div>
 
     <div id="mySidenav" class="mobile_nav">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a> {{ $currentPage := . }} {{ range .Site.Menus.main }}
         <a class="sidebar-nav-item{{if or ($currentPage.IsMenuCurrent " main " .) ($currentPage.HasMenuCurrent "main " .) }} active{{end}}" href="{{ .URL }}" title="{{ .Title }}">{{ .Name }}</a> {{ end }}
     </div>
 
-    <!-- Use any element to open the sidenav -->
-    <span onclick="openNav()">Menu</span>
+    <!-- Burger to open the sidenav -->
+    <span class="burger" onclick="openNav()">☰</span>
