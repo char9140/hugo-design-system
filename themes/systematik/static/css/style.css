@@ -2,32 +2,73 @@ body {
     background-color: floralwhite;
 }
 
-.single-container {
+.content-container {
     max-width: 1200px;
     margin: auto;
 }
 
 
-/*skjul og vis menuer*/
+/*----Automatisk font-størrelse----*/
 
-@media screen and (max-width: 600px) {
-    .mobile_nav,
-    .burger {
-        display: block;
-    }
-    .topnav {
-        display: none;
+@media only screen and (max-width: 700px) {
+    html {
+        font-size: calc(1em + 0vw);
     }
 }
 
-@media screen and (min-width: 601px) {
-    .mobile_nav,
-    .burger {
-        display: none;
+@media only screen and (min-width: 701px) and (max-width: 1200px) {
+    html {
+        font-size: calc(0.4em + 1vw);
     }
-    .topnav {
-        display: block;
+}
+
+@media only screen and (min-width: 1200px) {
+    html {
+        font-size: calc(1em + 3vw);
     }
+}
+
+body {
+    background-color: white;
+    font-family: 'Libre Baskerville', serif;
+    font-weight: 400;
+    line-height: 1.45;
+    color: #333;
+}
+
+p {
+    margin-bottom: 1.3em;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    margin: 1.414em 0 0.5em;
+    font-weight: inherit;
+    line-height: 1.2;
+}
+
+h1 {
+    margin-top: 0;
+    font-size: 3.157em;
+}
+
+h2 {
+    font-size: 2.369em;
+}
+
+h3 {
+    font-size: 1.777em;
+}
+
+h4 {
+    font-size: 1.333em;
+}
+
+small,
+.font_small {
+    font-size: 0.75em;
 }
 
 

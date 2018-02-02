@@ -1,17 +1,23 @@
 {{ partial "header.html" . }}
 
-<section>
-    <h1>{{ .Title}}</h1>
-    <div>{{ .Content}}</div>
-</section>
-
-<div class="container">
-    {{ range .Pages }}
-    <div class="col-sm-4">
-        <h3>{{ .Title}}</h3>
-        <div>
-            {{ .Content}}
+<div class="content-container">
+    <section>
+        <h1>{{ .Title}}</h1>
+        <h4>{{ .Content}}</h4>
+    </section>
+    <div class="row">
+        {{ range .Pages }}
+        <div class="col-xs-12 col-sm-6">
+            <article>
+                <h2>{{ .Title}}</h2>
+                <div>
+                    {{ .Content}}
+                </div>
+            </article>
         </div>
+        {{ end }}
     </div>
-    {{ end }} {{ partial "footer.html" . }}
 </div>
+
+
+{{ partial "footer.html" . }}
