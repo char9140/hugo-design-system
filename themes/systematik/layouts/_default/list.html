@@ -1,21 +1,21 @@
 {{ partial "header.html" . }}
 
-<div class="content-container">
-    <section>
-        <h1>{{ .Title}}</h1>
-        <h4>{{ .Content}}</h4>
-    </section>
-    <div class="row">
-        {{ range .Pages }}
-        <div class="col-xs-12 col-sm-6">
-            <article>
-                <h2>{{ .Title}}</h2>
-                <div>
-                    {{ .Content}}
+<div class="parallax">
+    <div class="content-container">
+        <div class="row">
+            {{ range .Pages }}
+            <div class="col-xs-12 col-sm-6">
+                <div class="article">
+                    <div class="article-content">
+                        <h2>{{ .Title}}</h2>
+                        <p>
+                            {{ .Content}}
+                        </p>
+                    </div>
                 </div>
-            </article>
+            </div>
+            {{ end }}
         </div>
-        {{ end }}
     </div>
 </div>
 

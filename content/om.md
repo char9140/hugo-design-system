@@ -6,7 +6,7 @@ description: Lær mere om designsystemet eller kontakt os
 ---
 
 <div class="container">
-        <div id="formfeedback" class="hidden">Vi vender tilbage snarest!</div>
+        <div id="formfeedback" class="hidden">Tak for beskeden! Vi vender tilbage til dig hurtigst muligt</div>
           <form action="" method="post" id="kontaktmig">
               <label for="Navn">Navn</label>
               <input type="text" id="navn" name="navn" placeholder="Dit navn">

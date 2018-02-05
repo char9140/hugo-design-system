@@ -1,7 +1,60 @@
 <script src="jquery-3.3.1.min.js"></script>
 <script src="{{ .Site.BaseURL}}js/script.js"></script>
 
-Det her er footeren
+<footer class="footer-distributed">
+
+    <div class="footer-left">
+
+        <h3>Company<span>logo</span></h3>
+
+        <p class="footer-links">
+            {{ $currentPage := . }} {{ range .Site.Menus.main }}
+            <a class="sidebar-nav-item{{if or ($currentPage.IsMenuCurrent " main " .) ($currentPage.HasMenuCurrent "main " .) }} active{{end}}" href="{{ .URL }}" title="{{ .Title }}">{{ .Name }}</a> {{ end }}
+        </p>
+
+        <p class="footer-company-name">Company Name &copy; 2018</p>
+    </div>
+
+    <div class="footer-center">
+
+        <div>
+            <i class="fa fa-map-marker"></i>
+            <p><span>Gadenavn 42</span> København, Danmark</p>
+        </div>
+
+        <div>
+            <i class="fa fa-phone"></i>
+            <p>+45 1111 1111</p>
+        </div>
+
+        <div>
+            <i class="fa fa-envelope"></i>
+            <p><a href="mailto:support@company.com">charlotte.r.nielsen@htmail.com</a></p>
+        </div>
+
+    </div>
+
+    <div class="footer-right">
+
+        <p class="footer-company-about">
+            <span>Om virksomheden</span> Charlotte Randeris har designet og kodet dette template med Hugo. Dette template eller dele af det kan genbruges til andre formål.
+        </p>
+
+        <div class="footer-icons">
+
+            <a href="#">
+                <i class="fab fa-facebook-square"></i>
+            </a>
+            <a href="#"><i class="fab fa-twitter-square"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="#"><i class="fab fa-github-square"></i></a>
+
+        </div>
+
+    </div>
+
+</footer>
+
 </body>
 
 </html>
