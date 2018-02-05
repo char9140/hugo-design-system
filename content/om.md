@@ -2,12 +2,25 @@
 title: "Om"
 date: 2018-02-01T08:46:28+01:00
 draft: true
+description: Lær mere om designsystemet eller kontakt os
 ---
 
-Det her er om-siden
-
-Lorem ipsum dolor sit amet, placeat maecenas aliquam. Adipiscing et aliquet in scelerisque, dignissim est penatibus proin nibh accumsan, class cursus, aliquam hendrerit amet, massa dictum arcu at lorem eros lacus. Et quisque ante orci nunc vestibulum, aliquam viverra ut pulvinar. Urna felis quis, nulla sagittis, curabitur conubia, mollitia semper nec adipiscing lacinia. Arcu proin nec elit tempor nisi, wisi phasellus sit turpis luctus, senectus suspendisse et nibh suscipit, volutpat condimentum parturient vulputate rutrum. Tortor in suspendisse diam amet phasellus odio, odio ipsum ipsum, ut faucibus justo at, mi pulvinar a quisque. Mauris quis ornare tellus volutpat, convallis luctus, gravida vestibulum sit velit. Tincidunt ipsum vitae. Lacus diam purus amet sed eros, tempus pretium elementum montes dolor hendrerit nisl. Arcu blandit quos dui felis nulla sem, auctor pede vitae tristique. A eu sagittis imperdiet, lacus aliquet pretium enim pretium. Ut praesent dapibus, aliquam phasellus fermentum, pellentesque lorem dui suscipit velit mattis.
-
-Amet lorem wisi cras lacus pretium, penatibus imperdiet urna iaculis mauris, natoque mauris pharetra quis non justo. Arcu integer quis aliquam a, a enim tellus lacus donec odio, laoreet odio pede viverra facilisis. Metus id, consequat luctus. Sed donec tellus eveniet sagittis accumsan in, aliquam turpis quis proin rutrum qui, et proin, adipiscing pede scelerisque dignissim neque eu, wisi montes. Nam arcu eget, risus in lacinia. Quam fermentum pretium, vel non dolor vivamus neque rutrum pellentesque, optio non nullam mi libero ridiculus. Amet pede, nullam eu elit sed vitae aenean, eget volutpat et facilisis sociis. A nunc eget, mus dis sem et, dolor amet, morbi turpis mollis facere. Id sodales odio. Nibh penatibus nec quis turpis turpis hac. Integer lacinia ridiculus a pellentesque inceptos, leo quis mauris dolor ultricies habitasse.
-
-Phasellus mauris ultricies libero vitae, sociis egestas vestibulum amet fusce sit et, vestibulum ut varius at culpa turpis. Sodales nullam rhoncus, hendrerit vel dui amet aut blandit, ut arcu rutrum quisque in, nisl sodales dui sodales pede lacinia. Aliquet praesent magna feugiat ipsum, vel nunc, natoque porta faucibus tellus aptent, nam lacus odio fermentum, nullam sed eget vitae mi. Velit parturient in vitae, placerat risus, 
+<div class="container">
+        <div id="formfeedback" class="hidden">Vi vender tilbage snarest!</div>
+          <form action="" method="post" id="kontaktmig">
+              <label for="Navn">Navn</label>
+              <input type="text" id="navn" name="navn" placeholder="Dit navn">
+              <label for="email">E-mail</label>
+              <input type="email" id="email" name="email" placeholder="Din e-mail">
+              <label for="henvendelse">Jeg henvender mig vedr.:</label>
+              <select id="henvendelse" name="henvendelse">
+                <option value="support">Support</option>
+                <option value="tilbud">Tilbud</option>
+                <option value="prepurchase">Spørgsmål før køb</option>
+              </select>
+              <label for="besked">Besked</label>
+              <textarea id="besked" name="besked" placeholder="Din besked.."></textarea>
+              <input type="submit" name="submit" value="Submit">
+              <div id="formfailure" class="hidden"></div>
+          </form>
+      </div>

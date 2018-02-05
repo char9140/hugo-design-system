@@ -5,23 +5,33 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <link rel="stylesheet" href="{{ .Site.BaseURL}}css/normalize.css">
     <link rel="stylesheet" href="{{.Site.BaseURL}}css/flexboxgrid.css">
     <link rel="stylesheet" href="{{.Site.BaseURL}}css/style.css">
-    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Rammetto+One" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
 </head>
 
 <body>
-    <div class="topnav" id="myTopnav">
-        {{ $currentPage := . }} {{ range .Site.Menus.main }}
-        <a class="sidebar-nav-item{{if or ($currentPage.IsMenuCurrent " main " .) ($currentPage.HasMenuCurrent "main " .) }} active{{end}}" href="{{ .URL }}" title="{{ .Title }}">{{ .Name }}</a> {{ end }}
-        <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
-    </div>
+    <header>
+        <div class="topnav" id="myTopnav">
+            {{ $currentPage := . }} {{ range .Site.Menus.main }}
+            <a class="sidebar-nav-item{{if or ($currentPage.IsMenuCurrent " main " .) ($currentPage.HasMenuCurrent "main " .) }} active{{end}}" href="{{ .URL }}" title="{{ .Title }}">{{ .Name }}</a> {{ end }}
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+        </div>
 
-    <div id="mySidenav" class="mobile_nav">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a> {{ $currentPage := . }} {{ range .Site.Menus.main }}
-        <a class="sidebar-nav-item{{if or ($currentPage.IsMenuCurrent " main " .) ($currentPage.HasMenuCurrent "main " .) }} active{{end}}" href="{{ .URL }}" title="{{ .Title }}">{{ .Name }}</a> {{ end }}
-    </div>
+        <div id="mySidenav" class="mobile_nav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a> {{ $currentPage := . }} {{ range .Site.Menus.main }}
+            <a class="sidebar-nav-item{{if or ($currentPage.IsMenuCurrent " main " .) ($currentPage.HasMenuCurrent "main " .) }} active{{end}}" href="{{ .URL }}" title="{{ .Title }}">{{ .Name }}</a> {{ end }}
+        </div>
 
-    <!-- Burger to open the sidenav -->
-    <span class="burger" onclick="openNav()">☰</span>
+        <!-- Burger to open the sidenav -->
+        <span class="burger" id="burger" onclick="openNav()">☰</span>
+        <!--        -->
+
+        <div class="bannertextbox">
+            <h1 class="bannertext">{{.Title}}</h1>
+            <h4 class="bannertext">{{.Description}}</h4>
+        </div>
+    </header>
